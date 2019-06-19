@@ -5,8 +5,10 @@ library(ggplot2)
 library(readr)
 library(tidyquant)  
 
+# Get some Market data from our friends at the CBOE
 df <- read_csv("https://markets.cboe.com/us/futures/market_statistics/historical_data/products/csv/VX/2020-01-22")
 
+# What does the dataframe look like?
 glimpse(df)
 df <- rename(df, date=`Trade Date`)
 
